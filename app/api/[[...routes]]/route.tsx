@@ -79,7 +79,7 @@ app.frame('/try', async (c) => {
       const { data: likeData } = await likeResponse.json();
       
       const balance = balanceData.TokenBalances.TokenBalance[0]?.amount ?? 0;
-      const qualified = parseInt(balance, 10) > 999999999999999999999;
+      const qualified = parseInt(balance, 10) > 4999999999999999999999;
 
       const isFollowing = channelData.FarcasterChannelParticipants.FarcasterChannelParticipant
         .some((participant: { channelId: string; }) => participant.channelId === 'basegulp');
